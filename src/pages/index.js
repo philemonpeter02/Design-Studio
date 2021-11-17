@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Header from "../components/header"
 import Dropdown from "../components/Dropdown"
 import Hero from "../components/Hero"
