@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { CgLoadbarSound } from 'react-icons/cg';
+import { CgLoadbarSound } from 'react-icons/Cg';
 import { RiSearchLine } from 'react-icons/Ri';
 import { menuData } from '../data/MenuData'
 import logo from '../images/logo.png';
@@ -29,7 +29,7 @@ useEffect(() => {
   return(
   <Nav active={scroll} >
     <Avatar src={logo}/>
-    <Bars onClick={toggle} />
+    <Bars active={scroll} onClick={toggle} />
     <NavMenu>
       {menuData.map((item, index) => (
         <NavLink active={scroll} to={item.link} key={index}>
@@ -89,7 +89,7 @@ cursor: pointer;
 
 const Bars = styled(CgLoadbarSound)`
 display: none;
-color: #fff;
+color: ${({active}) => (active ? "#fff" : "#000")};
 @media screen and (max-width: 768px) {
   display: block;
   position: absolute;

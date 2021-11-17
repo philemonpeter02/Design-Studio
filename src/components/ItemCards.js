@@ -5,7 +5,7 @@ import { FaRegArrowAltCircleDown } from 'react-icons/Fa';
 import { FiEye } from 'react-icons/Fi';
 
 
-const ItemCards = ({menuItem}) => {
+const ItemCards = () => {
     return (
         <CardsContainer>
            <TitleContainer>
