@@ -6,9 +6,6 @@ import { RiSearchLine } from 'react-icons/ri';
 import { menuData } from '../data/MenuData'
 import logo from '../images/logo.png';
 
-
-
-
 const Header = ({toggle}) => {
   const [scroll, setScroll] = useState(false)
 

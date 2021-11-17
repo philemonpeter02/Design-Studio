@@ -1,4 +1,4 @@
-import img from '../images/data1.png';
+import img from '../images/data.png';
 
 export const allData = [
     { 

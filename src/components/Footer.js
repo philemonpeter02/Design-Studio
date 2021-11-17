@@ -10,11 +10,11 @@ const Footer = () => {
             <FooterLinksWrapper2>
                 <FooterLinkItems>
                     <FooterLinkTitle>About</FooterLinkTitle>
-                    <FooterLink to="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing purus ultricies 
+                    <FooterLink to="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Adipiscing purus ultricies Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Adipiscing purus ultricies 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing purus ultricies 
-
-</FooterLink>
+                    </FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper2>
             <FooterLinksWrapper>
