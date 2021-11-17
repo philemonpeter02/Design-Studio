@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import Layout from "../components/Layout"
-import Header from "../components/Header"
+import Navbar from "../components/Navbar"
 import Dropdown from "../components/Dropdown"
 import Hero from "../components/Hero"
 import TabSelector from "../components/TabSelector"
@@ -16,7 +16,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Header toggle={toggle} />
+      <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero />
       <TabSelector />

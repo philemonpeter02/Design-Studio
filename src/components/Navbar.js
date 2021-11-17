@@ -6,7 +6,7 @@ import { RiSearchLine } from 'react-icons/ri';
 import { menuData } from '../data/MenuData'
 import logo from '../images/logo.png';
 
-const Header = ({toggle}) => {
+const Navbar = ({toggle}) => {
   const [scroll, setScroll] = useState(false)
 
   const changeNav = () => {
@@ -41,7 +41,7 @@ useEffect(() => {
   
 )
 }
-export default Header
+export default Navbar
 
 const Nav = styled.nav`
 transition: 0.5s all ease-in-out;
