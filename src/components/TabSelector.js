@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import {tabsData} from "../data/TabsData"
 
-const TabSelector = () => {
+const TabSelector = ({filterItem}) => {
     return (
         <TabsWrapper>
            <TabsContainer>
       {tabsData.map((item, i) => (
-        <TabsBtn type="button" key={i}>
+        <TabsBtn type="button" key={i} onClick={() => filterItem(item.title)}>
         {item.title}
           
         </TabsBtn>
@@ -54,11 +54,13 @@ border-radius: 5px;
 outline: none;
 border: none;
 background-color: transparent;
+&:hover{
+    background-color: #4C52EA;
+    color: #fff;
+}
 &:active, :focus{
     background-color: #4C52EA;
     color: #fff;
     font-size: 20px;
-
-
 }
 `

@@ -12,15 +12,15 @@ export const allData = [
     { 
         id: 2,
         img: img,
-        title: 'Agency Web Design',
+        title: 'Task Management ',
         downloads: '980',
         views: '2.5k',
-        category: 'All'
+        category: 'New'
     },
     { 
         id: 3,
         img: img,
-        title: 'Agency Web Design',
+        title: 'Jewellery Web Design',
         downloads: '980',
         views: '2.5k',
         category: 'UI Kit'
@@ -28,7 +28,7 @@ export const allData = [
     { 
         id: 4,
         img: img,
-        title: 'Agency Web Design',
+        title: 'Lawyer Web Design',
         downloads: '980',
         views: '2.5k',
         category: 'UI Kit'

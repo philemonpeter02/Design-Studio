@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { allData } from '../data/AllData'
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
 
 
-const ItemCards = () => {
+const ItemCards = ({itemData}) => {
     return (
         <CardsContainer>
            <TitleContainer>
@@ -15,7 +14,7 @@ const ItemCards = () => {
            </TitleContainer>
            <CardItems>
            {
-               allData.map((item, index) => (
+            itemData.map((item, index) => (
                    <ItemContainer>
                        <ItemImg src={item.img} />
                        <ItemDesc>
