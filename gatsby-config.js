@@ -4,6 +4,7 @@ module.exports = {
     title: "Sajids Design Studio",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -21,8 +22,8 @@ module.exports = {
         name: `Sajid's Design Studio | Phil's`,
         short_name: `Design-Studio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000`,
+        theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`, 
       },
