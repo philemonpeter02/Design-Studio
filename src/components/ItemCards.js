@@ -81,6 +81,8 @@ height: 44px;
 background-color: #4C52EA;
 color: #fff;
 border-radius: 5px;
+font-size: clamp(0.5rem, 3vw, 1.2rem);
+
 `
 const CardItems = styled.div`
 margin-top: 40px;
@@ -96,7 +98,7 @@ margin-top: 40px;
 `
 const SectionTitle = styled.p`
 color: #3C3C3C;
-font-size: 18px;
+font-size: clamp(0.5rem, 3vw, 1.2rem);
 line-height: 21px;
 text-align: center;
 `

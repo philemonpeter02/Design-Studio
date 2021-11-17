@@ -7,7 +7,7 @@ const TabSelector = () => {
         <TabsWrapper>
            <TabsContainer>
       {tabsData.map((item, i) => (
-        <TabsBtn type="button" key={i} onClick={() => setTabsFilter(e.tabs)}>
+        <TabsBtn type="button" key={i}>
         {item.title}
           
         </TabsBtn>
@@ -48,7 +48,7 @@ width: 400px;
 `
 const TabsBtn = styled.button`
 margin: 0 12px;
-font-size: 18px;
+font-size: clamp(0.5rem, 3vw, 1.2rem);
 padding: 12px 18px;
 border-radius: 5px;
 outline: none;
