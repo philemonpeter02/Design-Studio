@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import {menuData} from '../data/MenuData';
 import {Link} from 'gatsby';
-import {FaTimes} from 'react-icons/Fa';
+import {FaTimes} from 'react-icons/fa';
 
 const Dropdown = ({toggle, isOpen}) => {
     return (

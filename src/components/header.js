@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { CgLoadbarSound } from 'react-icons/Cg';
-import { RiSearchLine } from 'react-icons/Ri';
+import { CgLoadbarSound } from 'react-icons/cg';
+import { RiSearchLine } from 'react-icons/ri';
 import { menuData } from '../data/MenuData'
 import logo from '../images/logo.png';
 

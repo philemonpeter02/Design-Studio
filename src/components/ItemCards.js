@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { allData } from '../data/AllData'
-import { FaRegArrowAltCircleDown } from 'react-icons/Fa';
-import { FiEye } from 'react-icons/Fi';
+import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+import { FiEye } from 'react-icons/fi';
 
 
 const ItemCards = () => {
