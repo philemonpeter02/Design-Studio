@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import Layout from "../components/Layout"
-import Header from "../components/header"
+import Header from "../components/Header"
 import Dropdown from "../components/Dropdown"
 import Hero from "../components/Hero"
 import TabSelector from "../components/TabSelector"
