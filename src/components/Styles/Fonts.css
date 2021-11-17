@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "SFProText";
+  src: local("SFProText"),
+    url(../../fonts/SFProText-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SFProTextMedium";
+  src: local("SFProTextMedium"),
+    url(../../fonts/SFProText-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"), url(../../fonts/Gilroy-Bold.woff);
+}
