@@ -33,5 +33,69 @@ export const allData = [
         views: '2.5k',
         category: 'UI Kit'
     },
+    { 
+        id: 5,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 6,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 7,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 8,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 9,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 10,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 11,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
+    { 
+        id: 12,
+        img: img,
+        title: 'Lawyer Web Design',
+        downloads: '980',
+        views: '2.5k',
+        category: 'UI Kit'
+    },
     
 ]

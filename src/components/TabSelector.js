@@ -45,6 +45,18 @@ width: 480px;
 @media screen and (max-width: 572px) {
 width: 400px;
 }
+@media screen and (max-width: 420px) {
+width: 350px;
+height: 60px;
+}
+@media screen and (max-width: 360px) {
+width: 320px;
+height: 50px;
+}
+@media screen and (max-width: 320px) {
+width: 260px;
+height: 40px;
+}
 `
 const TabsBtn = styled.button`
 margin: 0 12px;
@@ -62,5 +74,21 @@ background-color: transparent;
     background-color: #4C52EA;
     color: #fff;
     font-size: 20px;
+}
+@media screen and (max-width: 420px) {
+    padding: 10px 16px;
+&:active, :focus{
+        font-size: 1rem;}
+}
+}
+@media screen and (max-width: 360px) {
+    padding: 5px 14px;
+  &:active, :focus{
+        font-size: 0.8rem;}
+}
+@media screen and (max-width: 320px) {
+    padding: 5px 10px;
+  &:active, :focus{
+        font-size: 0.6rem;}
 }
 `

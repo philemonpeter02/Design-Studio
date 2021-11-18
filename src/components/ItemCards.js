@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
 
 
 const ItemCards = ({itemData}) => {
+    const [itemLength, setItemLength] = useState(9)
     return (
         <CardsContainer>
            <TitleContainer>
@@ -14,7 +15,7 @@ const ItemCards = ({itemData}) => {
            </TitleContainer>
            <CardItems>
            {
-            itemData.map((item, index) => (
+            itemData.slice(0, itemLength).map((item, index) => (
                    <ItemContainer>
                        <ItemImg src={item.img} />
                        <ItemDesc>
@@ -42,7 +43,9 @@ const ItemCards = ({itemData}) => {
            </CardItems>
         
             <BtnContainer>
-               <Btn type="button">
+               <Btn type="button" onClick={() => {
+                   setItemLength(itemLength+9)
+               }}>
                Load More...
                </Btn>
             </BtnContainer>
@@ -71,6 +74,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom: 15px;
+@media screen and (max-width: 320px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
 `
 const Btn = styled.button`
 outline: none;
@@ -81,7 +89,10 @@ background-color: #4C52EA;
 color: #fff;
 border-radius: 5px;
 font-size: clamp(0.5rem, 3vw, 1.2rem);
-
+@media screen and (max-width: 320px) {
+    width: 240px;
+    height: 34px;
+}
 `
 const CardItems = styled.div`
 margin-top: 40px;
@@ -94,6 +105,7 @@ margin-top: 40px;
 @media screen and (max-width: 860px) {
     grid-template-columns: repeat(1, 1fr);
 }
+
 `
 const SectionTitle = styled.p`
 color: #3C3C3C;
@@ -105,17 +117,55 @@ const ItemContainer = styled.div`
 width: 340px;
 height: 400px;
 margin-bottom: 1rem;
+&:hover img{
+  transform: scale(1.1);
+  box-shadow: 0px 1px 15px #000;
+  z-index:100;
+}
+}
+@media screen and (max-width: 360px) {
+    width: 320px;
+    height: 360px;
+}
+@media screen and (max-width: 320px) {
+    width: 300px;
+    height: 320px;
+}
+@media screen and (max-width: 300px) {
+    width: 260px;
+    height: 280px;
+}
 `
 const ItemImg = styled.img`
-width: 340px;
+width: 100%;
 height: 350px;
+transition: 0.2s ease;
+
+@media screen and (max-width: 360px) {
+    height: 360px;
+}
+@media screen and (max-width: 320px) {
+    height: 320px;
+}
+@media screen and (max-width: 300px) {
+    height: 280px;
+}
 `
 const ItemDesc = styled.div`
 width: 340px;
 height: 50px;
 display: flex;
 flex-direction: row;
-
+transition: 0.2s ease;
+${ItemContainer}:hover & {
+    margin-top: 15px;
+}
+@media screen and (max-width: 320px) {
+    width: 300px;
+}
+@media screen and (max-width: 300px) {
+    width: 260px;
+}
 `
 const ItemTitle = styled.p`
 display: flex;
@@ -123,8 +173,9 @@ width: 200px;
 height: 50px;
 font-size: clamp(0.5rem, 3vw, 1.2rem);
 color: #3C3C3C;
-display: flex;
 align-items: center;
+transition: 0.2s ease;
+
 `
 const ItemDownloads = styled.div`
 display: flex;
@@ -145,6 +196,8 @@ align-items: center;
 const ItemContentText = styled.p`
 font-size: 12px;
 color: #3C3C3C;
+transition: 0.2s ease;
+
 `
 const DownloadIcon = styled(FaRegArrowAltCircleDown)`
 color: #3C3C3C;
