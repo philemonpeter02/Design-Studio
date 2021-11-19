@@ -11,7 +11,7 @@ const Product = ({location}) => {
         <Layout>
           <ProductNav title={location.state ? location.state.title : null} downloads={location.state ? location.state.downloads : null} views={location.state ? location.state.views : null} />
           <ProductDetails img={location.state ? location.state.img : null}  />
-          <ItemCardsSection itemData={allData}/>
+          <ItemCardsSection itemData={allData} />
           <Footer />
         </Layout>
     )
