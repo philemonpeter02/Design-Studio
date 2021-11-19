@@ -6,7 +6,7 @@ import ItemCardsSection from '../components/ItemCardsSection'
 import { allData } from '../data/AllData'
 import Footer from "../components/Footer"
 
-const ProductPage = ({location}) => {
+const Product = ({location}) => {
 
     return (
         <Layout>
@@ -18,4 +18,4 @@ const ProductPage = ({location}) => {
     )
 }
 
-export default ProductPage
+export default Product
