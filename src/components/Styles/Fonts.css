@@ -9,6 +9,11 @@
     url(../../fonts/SFProText-Medium.ttf) format("truetype");
 }
 @font-face {
+  font-family: "SFProTextSemibold";
+  src: local("SFProTextSemibold"),
+    url(../../fonts/SFProText-Semibold.ttf) format("truetype");
+}
+@font-face {
   font-family: "Gilroy-Bold";
   src: local("Gilroy-Bold"), url(../../fonts/Gilroy-Bold.woff);
 }

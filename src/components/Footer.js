@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 
 const Footer = () => {
     return (
+        <>
         <FooterContainer>
                 
             <FooterLinksWrapper2>
@@ -33,18 +34,40 @@ const Footer = () => {
                     <FooterLink to="/">www.dribbble.com/artalisajid12</FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper>
+            
         </FooterContainer>
+        <FooterCopyRights>
+            © 2021 Sajid Studio. All rights reserved.
+            </FooterCopyRights>
+
+        </>
     )
 }
 
 export default Footer
 
+const FooterCopyRights = styled.p`
+font-size: clamp(0.5rem, 3vw, 1.2rem);
+padding: 1rem calc((100vw - 1150px) / 2);
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 1200px) {
+    padding: 1rem 2rem;
+}
+@media screen and (max-width: 400px) {
+    padding: 1rem;
+}
+@media screen and (max-width: 820px) {
+    grid-template-columns: 1fr;
+
+}
+`
 const FooterContainer = styled.div`
 padding: 5rem calc((100vw - 1200px) / 2);
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 color: #000;
-background: #fafafb;
+background: #FAFAFF;
 `
 const FooterLinksWrapper = styled.div`
 display: grid;
