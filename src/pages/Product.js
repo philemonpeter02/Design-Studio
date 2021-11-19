@@ -7,11 +7,10 @@ import { allData } from '../data/AllData'
 import Footer from "../components/Footer"
 
 const Product = ({location}) => {
-
     return (
         <Layout>
-          <ProductNav title={location.state.title} downloads={location.state.downloads} views={location.state.views} />
-          <ProductDetails img={location.state.img}  />
+          <ProductNav title={location.state ? location.state.title : null} downloads={location.state ? location.state.downloads : null} views={location.state ? location.state.views : null} />
+          <ProductDetails img={location.state ? location.state.img : null}  />
           <ItemCardsSection itemData={allData}/>
           <Footer />
         </Layout>
