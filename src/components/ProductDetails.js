@@ -62,6 +62,7 @@ flex-direction: row;
 const Image = styled.img`
 width: 1200px;
 height: 800px;
+border-radius: 5px;
 transition: 0.2s ease;
 @media screen and (max-width: 1336px) {
     width: 1000px;
