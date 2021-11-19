@@ -7,7 +7,7 @@ import { allData } from '../data/AllData'
 import Footer from "../components/Footer"
 
 const ProductPage = ({location}) => {
-    
+
     return (
         <Layout>
           <ProductNav title={location.state.title} downloads={location.state.downloads} views={location.state.views} />
