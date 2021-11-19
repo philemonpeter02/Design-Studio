@@ -27,7 +27,7 @@ const ItemCardsSection = ({itemData}) => {
             <CardItems>
            {
             itemData.slice(0, itemLength).map((item, index) => (
-                   <ItemContainer to="/productPage" state={{title: item.title, downloads: item.downloads, views: item.views, img: item.img}}>
+                   <ItemContainer to="/ProductPage" state={{title: item.title, downloads: item.downloads, views: item.views, img: item.img}}>
                        <ItemImg src={item.img} />
                        <ItemDesc>
                           <ItemTitle>
