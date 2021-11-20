@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {imgData} from '../data/ProductImgs' 
+import Modal from './Modal'
 const ProductDetails = ({img}) => {
     const [image, setImage] = useState(img)
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal =() => {
+        setShowModal(prev => !prev);
+    }
     return (
         <ImageWrapper>
            <Image src={image} />
@@ -21,12 +27,13 @@ const ProductDetails = ({img}) => {
 In vestibulum arcu commodo, ac eget. Vel faucibus massa praesent volutpat mi, pharetra. Nisl, at duis sed et sit diam, ultricies purus. Euismod semper maecenas vitae urna diam. Mollis integer orci lobortis lectus adipiscing. Est enim elementum viverra mi et. Pharetra, lacus purus malesuada elit, ultricies ac ornare volutpat. Aenean ultrices amet, lectus eget pellentesque amet.
            </ProductDesc>
            <BtnContainer>
-                <Btn style={{backgroundColor: '#4C52EA', color: '#fff'}} type="button">
+                <Btn onClick={openModal} style={{backgroundColor: '#4C52EA', color: '#fff'}} type="button">
                     Hire Us
                 </Btn>
                 <Btn type="button">
                     Download
                 </Btn>
+                <Modal showModal={showModal} setShowModal={setShowModal} />
            </BtnContainer>
             
         </ImageWrapper>
@@ -48,7 +55,6 @@ const ImageBtnContainer = styled.div`
 margin-top: 25px;
 display:flex;
 align-items: center;
-
 flex-direction: row;
 `
 const BtnContainer = styled.div`
@@ -102,6 +108,7 @@ margin-left: 25px;
 filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
 border-radius: 5px;
 transition: 0.2s ease;
+cursor: pointer;
 @media screen and (max-width: 500px) {
     margin-right: 15px;
     margin-left: 15px;
@@ -140,8 +147,9 @@ border-radius: 5px;
 font-size: clamp(0.5rem, 3vw, 1.2rem);
 margin: 0 15px;
 transition: 0.2s ease;
+z-index: 1;
+cursor: pointer;
 &:hover{
-    cursor: pointer;
     transform: scale(1.1);
   z-index:100;
 }

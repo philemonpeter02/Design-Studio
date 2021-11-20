@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
@@ -7,6 +7,15 @@ import { Link } from 'gatsby';
 
 const ItemCards = ({itemData}) => {
     const [itemLength, setItemLength] = useState(9)
+    const [totalItems, setTotalItems] = useState(null)
+
+    useEffect(() => {
+        const lastItem = () => {
+            const itemId = itemData.slice(-1)
+            itemId.filter((item) => setTotalItems(item.id) )
+        }
+        lastItem()
+    })
     return (
         <CardsContainer>
            <TitleContainer>
@@ -44,11 +53,19 @@ const ItemCards = ({itemData}) => {
            </CardItems>
         
             <BtnContainer>
-               <Btn type="button" onClick={() => {
+            {
+                itemLength >= totalItems ? null : (
+                    <Btn type="button" onClick={() => {
                    setItemLength(itemLength+9)
+                   console.log(itemLength)
+                   console.log(totalItems)
                }}>
                Load More...
                </Btn>
+                )
+            }
+            
+               
             </BtnContainer>
         </CardsContainer>
     )
@@ -90,6 +107,12 @@ background-color: #4C52EA;
 color: #fff;
 border-radius: 5px;
 font-size: clamp(0.5rem, 3vw, 1.2rem);
+cursor: pointer;
+transition: 0.2s ease;
+&:hover{
+    transform: scale(1.1);
+  z-index:100;
+}
 @media screen and (max-width: 320px) {
     width: 240px;
     height: 34px;

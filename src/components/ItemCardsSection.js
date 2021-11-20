@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import logo from '../images/logo.png';
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
@@ -8,6 +8,15 @@ import "./Styles/Fonts.css"
 
 const ItemCardsSection = ({itemData}) => {
     const [itemLength, setItemLength] = useState(6)
+    const [totalItems, setTotalItems] = useState(null)
+
+    useEffect(() => {
+        const lastItem = () => {
+            const itemId = itemData.slice(-1)
+            itemId.filter((item) => setTotalItems(item.id) )
+        }
+        lastItem()
+    })
 
     return (
         <SectionWrapper>
@@ -53,11 +62,17 @@ const ItemCardsSection = ({itemData}) => {
            }
            </CardItems>
            <BtnContainer>
-               <Btn type="button" onClick={() => {
-                   setItemLength(itemLength+3)
+           {
+                itemLength >= totalItems ? null : (
+                    <Btn type="button" onClick={() => {
+                   setItemLength(itemLength+9)
+                   console.log(itemLength)
+                   console.log(totalItems)
                }}>
                Load More...
                </Btn>
+                )
+            }
             </BtnContainer>
         
         </SectionWrapper>
@@ -83,7 +98,6 @@ display: flex;
 align-items: center;
 padding: 0 1rem;
 height: 100%;
-cursor: pointer;
 `
 const LogoContainer = styled.div`
 display: flex;

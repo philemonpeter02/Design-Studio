@@ -66,6 +66,7 @@ border-radius: 5px;
 outline: none;
 border: none;
 background-color: transparent;
+cursor: pointer;
 &:hover{
     background-color: #4C52EA;
     color: #fff;

@@ -4,12 +4,16 @@ import logo from '../images/logo.png';
 import "./Styles/Fonts.css"
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
+import { Link } from 'gatsby';
 
 const ProductNav = ({title, downloads, views}) => {
     return (
         <Nav>
             <ContentContainer>
-                <Avatar src={logo}/>
+                <LogoContainer to="/">
+                   <Avatar src={logo}/>
+                </LogoContainer>
+                
                 <TextContainer>
                    <NavTitle>Sajid Design Studio</NavTitle>
                    <ProductTitle>{title}</ProductTitle>
@@ -47,7 +51,6 @@ z-index: 999;
 }
 `
 const ContentContainer = styled.div`
-height: 80px;
 width: 50vw;
 display: flex;
 flex-direction: row;
@@ -59,7 +62,6 @@ flex-direction: row;
 }
 `
 const ContentContainerRight = styled.div`
-height: 80px;
 width: 50vw;
 display: flex;
 flex-direction: row;
@@ -73,7 +75,6 @@ justify-content: flex-end;
 }
 `
 const TextContainer = styled.div`
-height: 80px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -89,13 +90,14 @@ cursor: pointer;
    height: 50%;
 }
 `
+const LogoContainer = styled(Link)``
 const NavTitle = styled.p`
-font-size: clamp(0.8rem, 3vw, 1.5rem);
+font-size: clamp(0.7rem, 3vw, 1.4rem);
 font-family: SFProTextSemibold;
 `
 const ProductTitle = styled.p`
 font-size: clamp(0.5rem, 3vw, 1.2rem);
-color: #3C3C3C
+color: #3C3C3C;
 `
 const DownloadIcon = styled(FaRegArrowAltCircleDown)`
 color: #3C3C3C;
@@ -110,7 +112,7 @@ margin-right: 5px;
 const ItemDownloads = styled.div`
 display: flex;
 width: 70px;
-height: 60px;
+height: 55px;
 font-size: 18px;
 display: flex;
 align-items: flex-end;
@@ -122,7 +124,7 @@ align-items: flex-end;
 const ItemViews = styled.div`
 display: flex;
 width: 70px;
-height: 60px;
+height: 55px;
 font-size: 18px;
 display: flex;
 align-items: flex-end;

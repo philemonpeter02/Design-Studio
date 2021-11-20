@@ -25,7 +25,9 @@ useEffect(() => {
   
   return(
   <Nav active={scroll} >
-    <Avatar src={logo}/>
+    <LogoContainer to="/">
+        <Avatar src={logo}/>
+    </LogoContainer>    
     <Bars active={scroll} onClick={toggle} />
     <NavMenu>
       {menuData.map((item, index) => (
@@ -73,6 +75,8 @@ padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 `
+const LogoContainer = styled(Link)``
+
 const SearchBtn = styled(Link)`
 color: #000;
 display: flex;
